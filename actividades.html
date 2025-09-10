@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividades - Programa de Rehabilitación Tipo 2</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <img
+          src="assets/img/Logo_del_MINSAL_Chile.png"
+          alt="Logo"
+          width="80"
+          height="64"
+          class="d-inline-block align-text-top"
+        />
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#hero">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#sobre">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#equipo">Nuestro Equipo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#actividades"
+                >Nuestras Actividades</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section for Activities -->
+    <section class="activities-hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">Nuestras Actividades</h1>
+        <p class="hero-subtitle">Programas de rehabilitación integral</p>
+      </div>
+    </section>
+
+    <!-- All Activities Section -->
+    <section id="actividades" class="activities-section py-5">
+      <div class="container">
+        <!-- Actividad 1 -->
+        <div class="row activity-item mb-5">
+          <div class="col-lg-6 col-md-12">
+            <div class="activity-content">
+              <h3 class="activity-title">Terapia Grupal</h3>
+              <p class="activity-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="activity-gallery">
+              <div class="single-image-container">
+                <img
+                  src="assets/img/1000219230.jpg"
+                  alt="Actividad 1"
+                  class="img-fluid activity-img"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  onclick="openImageModal('actividad1')"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actividad 2 -->
+        <div class="row activity-item mb-5">
+          <div class="col-lg-6 col-md-12 order-lg-2">
+            <div class="activity-content">
+              <h3 class="activity-title">Talleres de Arte</h3>
+              <p class="activity-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 order-lg-1">
+            <div class="activity-gallery">
+              <div class="single-image-container">
+                <img
+                  src="assets/img/1000219230.jpg"
+                  alt="Actividad 2"
+                  class="img-fluid activity-img"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  onclick="openImageModal('actividad2')"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actividad 3 -->
+        <div class="row activity-item mb-5">
+          <div class="col-lg-6 col-md-12">
+            <div class="activity-content">
+              <h3 class="activity-title">Sesiones de Ejercicio</h3>
+              <p class="activity-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="activity-gallery">
+              <div class="single-image-container">
+                <img
+                  src="assets/img/1000219230.jpg"
+                  alt="Actividad 3"
+                  class="img-fluid activity-img"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  onclick="openImageModal('actividad3')"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actividad 4 -->
+        <div class="row activity-item mb-5">
+          <div class="col-lg-6 col-md-12 order-lg-2">
+            <div class="activity-content">
+              <h3 class="activity-title">Actividades Recreativas</h3>
+              <p class="activity-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 order-lg-1">
+            <div class="activity-gallery">
+              <div class="single-image-container">
+                <img
+                  src="assets/img/1000219230.jpg"
+                  alt="Actividad 4"
+                  class="img-fluid activity-img"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  onclick="openImageModal('actividad4')"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="index.html" class="btn btn-primary btn-lg"
+            >Volver al inicio</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div
+      class="modal fade"
+      id="imageModal"
+      tabindex="-1"
+      aria-labelledby="imageModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <div class="image-container position-relative">
+              <img id="modalImage" src="" alt="" />
+              <button
+                class="btn btn-light position-absolute top-50 start-0 translate-middle-y ms-3"
+                id="prevBtn"
+                onclick="navigateImage(-1)"
+              >
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button
+                class="btn btn-light position-absolute top-50 end-0 translate-middle-y me-3"
+                id="nextBtn"
+                onclick="navigateImage(1)"
+              >
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
