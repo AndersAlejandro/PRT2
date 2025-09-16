@@ -5,20 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Programa de Rehabilitación Tipo 2 - Buenaventura</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IpyeD+sH5t4b6i/jSj9s9r/5s4a7C6Bv0n0G3/w88tK9p9n9t5F2g7b/n7L6f/V3E/3g8A1"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link
       rel="stylesheet"
@@ -26,15 +23,10 @@
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
       crossorigin=""
     />
-    <script
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-      crossorigin=""
-    ></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
         <img
@@ -44,8 +36,6 @@
           height="64"
           class="d-inline-block align-text-top"
         />
-        <!-- <a class="navbar-brand" href="#">PRT2</a> -->
-
         <button
           class="navbar-toggler"
           type="button"
@@ -54,7 +44,6 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
@@ -76,7 +65,7 @@
         </div>
       </div>
     </nav>
-    <!-- Hero Section -->
+
     <section id="hero" class="hero-section">
       <div class="hero-content">
         <h1 class="hero-title">Programa de Rehabilitación Tipo 2</h1>
@@ -84,7 +73,6 @@
       </div>
     </section>
 
-    <!-- Sobre Nosotros Section -->
     <section
       id="sobre"
       class="about-section py-5"
@@ -100,52 +88,61 @@
             </p>
           </div>
         </div>
-
         <div class="row g-4">
-          <!-- Nuestra Misión -->
           <div class="col-lg-4 col-md-6">
             <div class="about-card">
-              <div class="card-icon">
-                <i class="fas fa-hands-helping"></i>
+              <div class="card-icon icon-mission">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <!--!Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                  <path
+                    d="M488 192H336v56c0 39.7-32.3 72-72 72s-72-32.3-72-72V126.4l-64.9 39C107.8 176.9 96 197.8 96 220.2v47.3l-80 46.2C.7 322.5-4.6 342.1 4.3 357.4l80 138.6c8.8 15.3 28.4 20.5 43.7 11.7L231.4 448H368c35.3 0 64-28.7 64-64h16c17.7 0 32-14.3 32-32v-64h8c13.3 0 24-10.7 24-24v-48c0-13.3-10.7-24-24-24zm147.7-37.4L555.7 16C546.9.7 527.3-4.5 512 4.3L408.6 64H306.4c-12 0-23.7 3.4-33.9 9.7L239 94.6c-9.4 5.8-15 16.1-15 27.1V248c0 22.1 17.9 40 40 40s40-17.9 40-40v-88h184c30.9 0 56 25.1 56 56v28.5l80-46.2c15.3-8.9 20.5-28.4 11.7-43.7z"
+                  />
+                </svg>
               </div>
               <h3 class="card-title">Nuestra Misión</h3>
               <p class="card-description">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut
-                architecto quas vel ducimus sequi dolore error corporis quam
-                soluta, hic eligendi laborum eveniet consectetur officiis
-                necessitatibus autem dolores possimus tenetur?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi,
+                cum. Ab maiores assumenda deleniti minus numquam! Facilis nobis,
+                corporis nesciunt, omnis repudiandae, quasi assumenda itaque
+                libero laboriosam ipsum debitis! Inventore?
               </p>
             </div>
           </div>
-
-          <!-- Nuestra Visión -->
           <div class="col-lg-4 col-md-6">
             <div class="about-card">
-              <div class="card-icon">
-                <i class="fas fa-eye"></i>
+              <div class="card-icon icon-vision">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                  <!--!Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                  <path
+                    d="M320 96C239.2 96 174.5 132.8 127.4 176.6C80.6 220.1 49.3 272 34.4 307.7C31.1 315.6 31.1 324.4 34.4 332.3C49.3 368 80.6 420 127.4 463.4C174.5 507.1 239.2 544 320 544C400.8 544 465.5 507.2 512.6 463.4C559.4 419.9 590.7 368 605.6 332.3C608.9 324.4 608.9 315.6 605.6 307.7C590.7 272 559.4 220 512.6 176.6C465.5 132.9 400.8 96 320 96zM176 320C176 240.5 240.5 176 320 176C399.5 176 464 240.5 464 320C464 399.5 399.5 464 320 464C240.5 464 176 399.5 176 320zM320 256C320 291.3 291.3 320 256 320C244.5 320 233.7 317 224.3 311.6C223.3 322.5 224.2 333.7 227.2 344.8C240.9 396 293.6 426.4 344.8 412.7C396 399 426.4 346.3 412.7 295.1C400.5 249.4 357.2 220.3 311.6 224.3C316.9 233.6 320 244.4 320 256z"
+                  />
+                </svg>
               </div>
               <h3 class="card-title">Nuestra Visión</h3>
               <p class="card-description">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
-                earum aut illo adipisci iste? Temporibus cupiditate voluptate
-                iusto atque voluptas perferendis magnam laborum expedita
-                aspernatur. Ipsum consequatur accusantium alias quod?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem
+                totam nesciunt ut, perspiciatis alias ad! Nam ratione ab
+                inventore incidunt nihil, vitae id quidem optio obcaecati ex
+                expedita explicabo enim!
               </p>
             </div>
           </div>
-
-          <!-- Lo que nos Apasiona -->
           <div class="col-lg-4 col-md-12">
             <div class="about-card">
-              <div class="card-icon">
-                <i class="fas fa-heart"></i>
+              <div class="card-icon icon-passion">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                  <!--!Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                  <path
+                    d="M305 151.1L320 171.8L335 151.1C360 116.5 400.2 96 442.9 96C516.4 96 576 155.6 576 229.1L576 231.7C576 343.9 436.1 474.2 363.1 529.9C350.7 539.3 335.5 544 320 544C304.5 544 289.2 539.4 276.9 529.9C203.9 474.2 64 343.9 64 231.7L64 229.1C64 155.6 123.6 96 197.1 96C239.8 96 280 116.5 305 151.1z"
+                  />
+                </svg>
               </div>
               <h3 class="card-title">Lo que nos Apasiona</h3>
               <p class="card-description">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Deserunt ex quos nihil! Laudantium aspernatur animi dolorem
-                possimus error rerum, eum quis sint laboriosam accusantium
-                voluptatibus ratione necessitatibus beatae voluptates in!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo qui
+                vitae dolorem, quaerat eos veniam repudiandae! Dolores,
+                architecto, voluptatibus explicabo possimus optio fugit
+                exercitationem, porro molestiae aspernatur ad aperiam doloribus.
               </p>
             </div>
           </div>
@@ -153,7 +150,6 @@
       </div>
     </section>
 
-    <!-- Nuestro Equipo -->
     <section id="equipo" class="team-section py-5">
       <div class="container">
         <div class="row text-center mb-5">
@@ -161,455 +157,52 @@
             <h2 class="section-title">Nuestro Equipo</h2>
           </div>
         </div>
-
-        <div class="row g-4">
-          <!-- Card 1 -->
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="team-card">
-              <img
-                src="assets/img/profile.webp"
-                alt="John Doe"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Monitor</h5>
-                <p class="card-text">Monitor</p>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-                <a
-                  href="#"
-                  class="btn btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#teamCard1"
-                  >Ver más</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="team-card">
-              <img
-                src="assets/img/profile.webp"
-                alt="Jane Doe"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Monitor</h5>
-                <p class="card-text">Monitor</p>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-                <a
-                  href="#"
-                  class="btn btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#teamCard2"
-                  >Ver más</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="team-card">
-              <img
-                src="assets/img/profile.webp"
-                alt="Dr. María González"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Monitor</h5>
-                <p class="card-text">Monitor</p>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-                <a
-                  href="#"
-                  class="btn btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#teamCard3"
-                  >Ver más</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="team-card">
-              <img
-                src="assets/img/profile.webp"
-                alt="Carlos Mendoza"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Monitor</h5>
-                <p class="card-text">Monitor</p>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-                <a
-                  href="#"
-                  class="btn btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#teamCard4"
-                  >Ver más</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="team-card">
-              <img
-                src="assets/img/profile.webp"
-                alt="Ana Rodríguez"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Monitor</h5>
-                <p class="card-text">Monitor</p>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-                <a
-                  href="#"
-                  class="btn btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#teamCard5"
-                  >Ver más</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 6 -->
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="team-card">
-              <img
-                src="assets/img/profile.webp"
-                alt="Dr. Roberto Silva"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Monitor</h5>
-                <p class="card-text">Monitor</p>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-                <a
-                  href="#"
-                  class="btn btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#teamCard6"
-                  >Ver más</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Modals -->
-          <div
-            class="modal fade"
-            id="teamCard1"
-            tabindex="-1"
-            aria-labelledby="teamCard1Label"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body text-center">
-                  <img
-                    src="assets/img/profile.webp"
-                    alt="Monitor"
-                    class="img-fluid mb-3"
-                    style="max-width: 200px; border-radius: 10px"
-                  />
-                  <h4 class="mb-2">Monitor</h4>
-                  <p class="text-muted mb-3"><strong>Monitor</strong></p>
-                  <p class="text-start">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
-                  </p>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Cerrar
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="modal fade"
-            id="teamCard2"
-            tabindex="-1"
-            aria-labelledby="teamCard2Label"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body text-center">
-                  <img
-                    src="assets/img/profile.webp"
-                    alt="Monitor"
-                    class="img-fluid mb-3"
-                    style="max-width: 200px; border-radius: 10px"
-                  />
-                  <h4 class="mb-2">Monitor</h4>
-                  <p class="text-muted mb-3"><strong>Monitor</strong></p>
-                  <p class="text-start">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
-                  </p>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Cerrar
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal Card 3 -->
-          <div
-            class="modal fade"
-            id="teamCard3"
-            tabindex="-1"
-            aria-labelledby="teamCard3Label"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body text-center">
-                  <img
-                    src="assets/img/profile.webp"
-                    alt="Monitor"
-                    class="img-fluid mb-3"
-                    style="max-width: 200px; border-radius: 10px"
-                  />
-                  <h4 class="mb-2">Monitor</h4>
-                  <p class="text-muted mb-3"><strong>Monitor</strong></p>
-                  <p class="text-start">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
-                  </p>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Cerrar
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal Card 4 -->
-          <div
-            class="modal fade"
-            id="teamCard4"
-            tabindex="-1"
-            aria-labelledby="teamCard4Label"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body text-center">
-                  <img
-                    src="assets/img/profile.webp"
-                    alt="Monitor"
-                    class="img-fluid mb-3"
-                    style="max-width: 200px; border-radius: 10px"
-                  />
-                  <h4 class="mb-2">Monitor</h4>
-                  <p class="text-muted mb-3"><strong>Monitor</strong></p>
-                  <p class="text-start">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
-                  </p>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Cerrar
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal Card 5 -->
-          <div
-            class="modal fade"
-            id="teamCard5"
-            tabindex="-1"
-            aria-labelledby="teamCard5Label"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body text-center">
-                  <img
-                    src="assets/img/profile.webp"
-                    alt="Monitor"
-                    class="img-fluid mb-3"
-                    style="max-width: 200px; border-radius: 10px"
-                  />
-                  <h4 class="mb-2">Monitor</h4>
-                  <p class="text-muted mb-3"><strong>Monitor</strong></p>
-                  <p class="text-start">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
-                  </p>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Cerrar
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal Card 6 -->
-          <div
-            class="modal fade"
-            id="teamCard6"
-            tabindex="-1"
-            aria-labelledby="teamCard6Label"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body text-center">
-                  <img
-                    src="assets/img/profile.webp"
-                    alt="Monitor"
-                    class="img-fluid mb-3"
-                    style="max-width: 200px; border-radius: 10px"
-                  />
-                  <h4 class="mb-2">Monitor</h4>
-                  <p class="text-muted mb-3"><strong>Monitor</strong></p>
-                  <p class="text-start">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
-                  </p>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Cerrar
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="row g-4 justify-content-center" id="team-container"></div>
       </div>
     </section>
 
-    <!-- Nuestras Actividades -->
+    <div
+      class="modal fade"
+      id="teamModal"
+      tabindex="-1"
+      aria-labelledby="teamModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <img
+              id="modalTeamImage"
+              src=""
+              alt="Foto del miembro del equipo"
+              class="img-fluid mb-3 rounded-circle"
+              style="max-width: 200px"
+            />
+            <h5 class="modal-title" id="modalTeamName"></h5>
+            <p id="modalTeamRole" class="text-muted mb-3"></p>
+            <p id="modalTeamDescription" class="text-start"></p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <section id="actividades" class="activities-section py-5">
       <div class="container">
         <div class="row text-center mb-5">
@@ -621,71 +214,7 @@
             </p>
           </div>
         </div>
-
-        <!-- Actividad 1 -->
-        <div class="row activity-item mb-5">
-          <div class="col-lg-6 col-md-12">
-            <div class="activity-content">
-              <h3 class="activity-title">Terapia Grupal</h3>
-              <p class="activity-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-12">
-            <div class="activity-gallery">
-              <div class="single-image-container">
-                <img
-                  src="assets/img/1000219230.jpg"
-                  alt="Actividad 1"
-                  class="img-fluid activity-img"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  onclick="openImageModal('actividad1')"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Actividad 2 -->
-        <div class="row activity-item mb-5">
-          <div class="col-lg-6 col-md-12 order-lg-2">
-            <div class="activity-content">
-              <h3 class="activity-title">Taller de Arte</h3>
-              <p class="activity-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-12 order-lg-1">
-            <div class="activity-gallery">
-              <div class="single-image-container">
-                <img
-                  src="assets/img/1000219230.jpg"
-                  alt="Actividad 2"
-                  class="img-fluid activity-img"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  onclick="openImageModal('actividad2')"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <div id="activities-container"></div>
         <div class="text-center mt-5">
           <a href="actividades.html" class="btn btn-primary btn-lg"
             >Ver todas las actividades</a
@@ -694,7 +223,6 @@
       </div>
     </section>
 
-    <!-- Image Modal -->
     <div
       class="modal fade"
       id="imageModal"
@@ -702,39 +230,54 @@
       aria-labelledby="imageModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <button
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
-              aria-label="Close"
+              aria-label="Cerrar galería"
             ></button>
           </div>
           <div class="modal-body text-center">
             <div class="image-container position-relative">
-              <img id="modalImage" src="" alt="" />
+              <img
+                id="modalImage"
+                src=""
+                alt="Imagen de la actividad"
+                class="img-fluid"
+              />
               <button
                 class="btn btn-light position-absolute top-50 start-0 translate-middle-y ms-3"
                 id="prevBtn"
-                onclick="navigateImage(-1)"
+                aria-label="Imagen anterior"
               >
-                <i class="fas fa-chevron-left"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                  <!--!Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                  <path
+                    d="M73.4 297.4C60.9 309.9 60.9 330.2 73.4 342.7L233.4 502.7C245.9 515.2 266.2 515.2 278.7 502.7C291.2 490.2 291.2 469.9 278.7 457.4L173.3 352L544 352C561.7 352 576 337.7 576 320C576 302.3 561.7 288 544 288L173.3 288L278.7 182.6C291.2 170.1 291.2 149.8 278.7 137.3C266.2 124.8 245.9 124.8 233.4 137.3L73.4 297.3z"
+                  />
+                </svg>
               </button>
               <button
                 class="btn btn-light position-absolute top-50 end-0 translate-middle-y me-3"
                 id="nextBtn"
-                onclick="navigateImage(1)"
+                aria-label="Imagen siguiente"
               >
-                <i class="fas fa-chevron-right"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                  <!--!Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                  <path
+                    d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z"
+                  />
+                </svg>
               </button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Contacto Section -->
+
     <section id="contacto" class="contact-section py-5">
       <div class="container">
         <div class="row text-center mb-5">
@@ -745,18 +288,15 @@
             </p>
           </div>
         </div>
-
         <div class="row g-4">
           <div class="col-lg-8 col-md-12">
             <div class="map-container">
               <div
                 id="mapa"
                 style="height: 400px; border-radius: 10px; cursor: pointer"
-                onclick="abrirGoogleMaps()"
               ></div>
             </div>
           </div>
-
           <div class="col-lg-4 col-md-12">
             <div class="contact-info">
               <div class="contact-item mb-4">
@@ -771,24 +311,18 @@
                   </p>
                 </div>
               </div>
-
               <div class="contact-item mb-4">
-                <div class="contact-icon">
-                  <i class="fas fa-phone"></i>
-                </div>
+                <div class="contact-icon"><i class="fas fa-phone"></i></div>
                 <div class="contact-details">
                   <h5>Teléfono</h5>
                   <p>+56 9 1234 5678</p>
                 </div>
               </div>
-
               <div class="contact-item mb-4">
-                <div class="contact-icon">
-                  <i class="fas fa-clock"></i>
-                </div>
+                <div class="contact-icon"><i class="fas fa-clock"></i></div>
                 <div class="contact-details">
                   <h5>Horario de Atención</h5>
-                  <p>Lunes a Viernes<br />10:00 - 12:00 AM</p>
+                  <p>Lunes a Viernes<br />08:00 - 12:00 AM</p>
                 </div>
               </div>
             </div>
@@ -796,16 +330,26 @@
         </div>
       </div>
     </section>
-    <!-- Footer -->
+
     <footer class="footer bg-dark text-white text-center py-3 mt-5">
       <div class="container">
         <p class="mb-0">Programa de Rehabilitación © 2025</p>
       </div>
     </footer>
-    <script src="index.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+      defer
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <script type="module" src="index.js" defer></script>
   </body>
 </html>

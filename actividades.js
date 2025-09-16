@@ -1,73 +1,18 @@
-// Archivo: main.js
+// Archivo: activities.js
 
-import { teamMembers } from "./assets/datos/equipo.js";
 import { activitiesData } from "./assets/datos/actividades.js";
 
-// --- Lógica de la Sección del Equipo ---
-const teamContainer = document.getElementById("team-container");
-
-function renderTeamMembers() {
-  teamContainer.innerHTML = "";
-  teamMembers.forEach((member) => {
-    const cardHtml = `
-  <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-duration="800">
-    <div class="team-card">
-      <div class="team-member-img-container">
-        <img
-          src="${member.image}"
-          alt="Foto de ${member.name}"
-          loading="lazy"
-        />
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">${member.name}</h5>
-        <p class="card-text">${member.role}</p>
-        <p class="card-text">
-          ${member.description.substring(0, 50)}...
-        </p>
-        <button
-          type="button"
-          class="btn btn-primary btn-team-modal"
-          data-member-id="${member.id}"
-          aria-label="Ver más información de ${member.name}"
-          data-bs-toggle="modal"
-          data-bs-target="#teamModal"
-        >
-          Ver más
-        </button>
-      </div>
-    </div>
-  </div>
-`;
-    teamContainer.innerHTML += cardHtml;
-  });
-
-  document.querySelectorAll(".btn-team-modal").forEach((button) => {
-    button.addEventListener("click", (event) => {
-      const memberId = event.currentTarget.dataset.memberId;
-      const memberData = teamMembers.find((m) => m.id === memberId);
-      if (memberData) {
-        document.getElementById("modalTeamImage").src = memberData.image;
-        document.getElementById("modalTeamName").textContent = memberData.name;
-        document.getElementById("modalTeamRole").textContent = memberData.role;
-        document.getElementById("modalTeamDescription").textContent =
-          memberData.description;
-      }
-    });
-  });
-}
-
-// --- Lógica de la Sección de Actividades (Página de Inicio) ---
-const activitiesContainer = document.getElementById("activities-container");
+// --- Lógica de la Sección de Actividades (Página Completa) ---
+const activitiesContainer = document.getElementById(
+  "activities-container-full"
+);
 let currentActivityImages = [];
 let currentImageIndex = 0;
 
-function renderHomePageActivities() {
+function renderAllActivities() {
   activitiesContainer.innerHTML = "";
-  // Mostramos solo las primeras 2 actividades
-  const activitiesToShow = activitiesData.slice(0, 2);
-
-  activitiesToShow.forEach((activity, index) => {
+  // Mostramos TODAS las actividades
+  activitiesData.forEach((activity, index) => {
     const isEven = index % 2 === 0;
     const orderClass1 = isEven ? "order-lg-1" : "order-lg-2";
     const orderClass2 = isEven ? "order-lg-2" : "order-lg-1";
@@ -100,7 +45,6 @@ function renderHomePageActivities() {
     activitiesContainer.innerHTML += activityHtml;
   });
 
-  // Agregamos el event listener para el modal
   activitiesContainer.addEventListener("click", (event) => {
     const imgElement = event.target.closest(".activity-img");
     if (imgElement) {
@@ -147,36 +91,12 @@ if (prevBtn && nextBtn) {
 
 // --- Inicialización ---
 document.addEventListener("DOMContentLoaded", () => {
-  renderTeamMembers();
-  renderHomePageActivities(); // Renderiza solo las actividades de la página de inicio
+  renderAllActivities(); // Renderiza todas las actividades en esta página
 
   AOS.init({
     duration: 800,
     once: true,
   });
-
-  const mapElement = document.getElementById("mapa");
-  if (mapElement) {
-    const coordenadas = [-18.44566971387962, -70.29167639063388];
-    const map = L.map("mapa").setView(coordenadas, 16);
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution:
-        'Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      maxZoom: 19,
-    }).addTo(map);
-
-    L.marker(coordenadas)
-      .addTo(map)
-      .bindPopup("<b>Programa de Rehabilitación</b><br>Lagunillas 815, Arica.")
-      .openPopup();
-
-    mapElement.addEventListener("click", () => {
-      window.open(
-        `http://maps.google.com/?q=${coordenadas[0]},${coordenadas[1]}`,
-        "_blank"
-      );
-    });
-  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {

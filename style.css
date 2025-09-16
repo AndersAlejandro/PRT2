@@ -1,14 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
 /* General Styles */
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  margin-top: 56px; /* Ajuste para el navbar fijo de Bootstrap */
 }
 
+a {
+  text-decoration: none;
+}
+/* Ajusta este valor para que coincida con la altura de tu navbar */
+#hero,
+#sobre,
+#equipo,
+#actividades,
+#contacto {
+  scroll-margin-top: 80px; /* Ejemplo: 80px, si tu navbar mide 56px de alto, más un espacio extra */
+}
 /* Navbar Styles */
 .navbar {
   padding: 1rem 0;
@@ -39,10 +55,15 @@ body {
   transform: translateY(-2px);
 }
 
+.navbar-nav .nav-link.active {
+  font-weight: 700;
+  color: #007bff !important;
+}
+
 /* Hero Section Styles */
 .hero-section {
   height: 100vh;
-  background-image: url("assets/img/1000219230.jpg");
+  background-image: url("assets/img/1000219230.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -171,37 +192,45 @@ body {
   font-size: 2rem;
   color: white;
 }
-
-/* Estilo especial para iconos de corazón */
-.card-icon:has(i.fa-heart),
-.card-icon:has(i.fa-heartbeat),
-.card-icon:has(i.fa-heart-pulse) {
-  background: linear-gradient(135deg, #dc3545, #c82333) !important;
+.card-icon svg {
+  width: 100%; /* El SVG ocupa el 100% del ancho del card-icon */
+  height: 100%; /* El SVG ocupa el 100% de la altura del card-icon */
+  padding: 20%; /* Reduce el tamaño del ícono dentro del círculo para que no sobresalga */
+  box-sizing: border-box; /* Asegura que el padding no cause que el SVG sobresalga */
+  display: block; /* Elimina cualquier espacio extra que pueda causar desalineación */
+  margin: 0 auto; /* Centra el SVG horizontalmente si el display no lo hace */
 }
 
-.card-icon i.fa-heart,
-.card-icon i.fa-heartbeat,
-.card-icon i.fa-heart-pulse {
-  color: white !important;
+.card-icon svg path {
+  fill: white !important; /* Fuerza el color blanco para la forma del ícono, sobrescribiendo cualquier color SVG interno */
 }
-
-/* Estilo especial para icono de manos ayudando */
-.card-icon:has(i.fa-hands-helping) {
+/* Estilos específicos para cada ícono */
+.card-icon.icon-mission {
   background: linear-gradient(135deg, #007bff, #0056b3) !important;
 }
 
-/* Mantener el color azul en hover para manos ayudando */
-.about-card:hover .card-icon:has(i.fa-hands-helping) {
-  background: linear-gradient(135deg, #007bff, #0056b3) !important;
+.about-card:hover .card-icon.icon-mission {
+  background: linear-gradient(135deg, #0056b3, #004085) !important;
 }
 
-/* Estilo especial para icono de visión */
-.card-icon:has(i.fa-eye) {
+.card-icon.icon-vision {
   background: linear-gradient(135deg, #28a745, #20c997) !important;
 }
 
+.about-card:hover .card-icon.icon-vision {
+  background: linear-gradient(135deg, #20c997, #1e927c) !important;
+}
+
+.card-icon.icon-passion {
+  background: linear-gradient(135deg, #dc3545, #c82333) !important;
+}
+
+.about-card:hover .card-icon.icon-passion {
+  background: linear-gradient(135deg, #c82333, #9e1c28) !important;
+}
+
+/* Regla de hover general para iconos */
 .about-card:hover .card-icon {
-  background: linear-gradient(135deg, #28a745, #20c997);
   transform: scale(1.1);
 }
 
@@ -344,6 +373,28 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
 }
+/* Estilos para la imagen circular en la tarjeta del equipo */
+.team-member-img-container {
+  width: 150px; /* Define el ancho del contenedor */
+  height: 150px; /* Define la altura del contenedor */
+  border-radius: 50%; /* Esto crea la forma circular */
+  overflow: hidden; /* Oculta las partes de la imagen que se desbordan */
+  margin: 0 auto 20px; /* Centra el contenedor y añade espacio inferior */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra para un efecto 3D */
+}
+
+/* Asegura que la imagen dentro del contenedor ocupe todo el espacio */
+.team-member-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Recorta la imagen para que se ajuste sin distorsionarse */
+}
+
+/* Ajusta el padding de la tarjeta si es necesario */
+.team-card {
+  padding-top: 20px;
+  text-align: center;
+}
 
 /* Modal styles */
 .modal-body img {
@@ -409,6 +460,16 @@ body {
 }
 
 /* Activities Section Styles */
+.activity-content {
+  /* Convierte este div en un contenedor flexible */
+  display: flex;
+  /* Apila los elementos hijos (título y descripción) en una columna */
+  flex-direction: column;
+  /* Centra el contenido verticalmente dentro del div */
+  justify-content: center;
+  /* Asegura que este div ocupe toda la altura de su columna */
+  height: 100%;
+}
 .activities-section {
   padding: 80px 0;
 }
@@ -418,9 +479,9 @@ body {
   align-items: center;
 }
 
-.activity-content {
+/* .activity-content {
   padding: 20px;
-}
+} */
 
 .activity-title {
   font-size: 2rem;
@@ -517,10 +578,10 @@ body {
   }
 }
 
-/* Activities Hero Section */
+/* Activities Hero Section (para actividades.html) */
 .activities-hero-section {
   height: 50vh;
-  background-image: url("assets/img/1000219230.jpg");
+  background-image: url("assets/img/1000219230.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -528,7 +589,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 76px;
+  margin-top: 56px; /* Ajuste para el navbar fijo de Bootstrap */
 }
 
 .activities-hero-section::before {
@@ -565,15 +626,6 @@ body {
 }
 
 /* Image Modal Styles */
-.activity-img {
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.activity-img:hover {
-  transform: scale(1.05);
-}
-
 #imageModal .modal-content {
   border: none;
   border-radius: 10px;
@@ -615,7 +667,7 @@ body {
 }
 
 #imageModal .btn {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(146, 20, 20, 0);
   border: none;
   border-radius: 50%;
   width: 50px;
@@ -629,11 +681,66 @@ body {
 
 #imageModal .btn:hover {
   opacity: 1;
-  background: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.445);
   transform: scale(1.1);
 }
 
-#imageModal .btn i {
-  color: #333;
-  font-size: 1.2rem;
+/* Contacto Section Styles */
+.contact-section {
+  padding: 80px 0;
+}
+
+.contact-info {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.contact-details h5 {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.contact-details p {
+  margin: 0;
+  color: #6c757d;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.footer p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.map-container {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#mapa {
+  height: 400px;
 }
